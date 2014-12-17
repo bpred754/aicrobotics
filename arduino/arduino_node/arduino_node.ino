@@ -22,6 +22,8 @@ void messageCb( const std_msgs::Int16& toggle_msg){
        turnRight();
      case -3:
        reverse();
+      case -100:
+        stopExecution();
      default:
        goStraight(instruction);
   }
@@ -83,4 +85,8 @@ void turnRight() {
 void reverse() {
   // Reverse logic
   finished = true;
+}
+
+void stopExecution() {
+  
 }

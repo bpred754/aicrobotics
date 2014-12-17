@@ -40,10 +40,15 @@ def parseInstructions(data):
     global instructions
     instructionString = data.data
 
-    # Parse instructions string and add each instruction to the instruction queue
-    instructionsArray = instructionString.split(",")
-    for i in range(len(instructionsArray)):
-        instructions.put(instructionsArray[i])
+    if(instructionString != "stop"):
+        # Parse instructions string and add each instruction to the instruction queue
+        instructionsArray = instructionString.split(",")
+        for i in range(len(instructionsArray)):
+            instructions.put(instructionsArray[i])
+    else:
+        with instructions.mutex:
+            instructions.queue.clear()
+            instructions.put(-100)
 
     # Send first instruction
     sendInstruction()
