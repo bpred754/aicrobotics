@@ -19,7 +19,7 @@ Run Application
 3. Open terminal tab (tab1) and run 'roscore'
 4. Open terminal tab (tab2) and run 'rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0'
 5. Open terminal tab (tab3) and run 'rosrun aicrobotics arduino_relay.py'
-6. Open terminal tab (tab4) and run 'rosrun aicrobotics instruction_algorithm.py'
+6. Open terminal tab (tab4) and run 'rosrun aicrobotics user_control.py'
 
 Resources
 ===========

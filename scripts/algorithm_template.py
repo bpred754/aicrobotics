@@ -23,7 +23,7 @@ def init():
 
 def runAlgorithm():
     # Place algorithm here
-    instructions = "10,-1,20,-2" # go straight 10, turn left, go straight 20, go right
+    instructions = 10, -100 #"10,-1,20,-2" # go straight 10, turn left, go straight 20, go right
     relay(instructions)
 
 def relay(instructions):
